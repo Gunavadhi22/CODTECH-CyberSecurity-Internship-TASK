@@ -19,7 +19,6 @@ def calculate_hash(file_path):
 def main():
     file_path = input("Enter file name to monitor: ")
 
-    # Calculate original hash
     original_hash = calculate_hash(file_path)
     if original_hash is None:
         print("File not found!")
@@ -30,12 +29,10 @@ def main():
 
     input("\nModify the file if needed, then press Enter...")
 
-    # Calculate new hash
     new_hash = calculate_hash(file_path)
     print("\nNew Hash Value:")
     print(new_hash)
-
-    # Compare hash values
+    
     if original_hash == new_hash:
         print("\nFile integrity maintained. No changes detected.")
     else:
@@ -43,3 +40,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
